@@ -1,0 +1,45 @@
+.wrapper {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav-bar {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid black;
+}
+
+.nav-bar li {
+    display: block;
+    float: left;
+    padding: 20px;
+    list-style: none;
+}
+.nav-bar li:last-child{
+    float: right;
+}
+
+#center_info {
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 2px solid black;
+}
+
+img {
+    float: left;
+    margin-right: 40px;
+}
+
+#about_me {
+    float: right;
+    font-size: 30px;
+}
+#num{
+    font-size: 40px;
+}
