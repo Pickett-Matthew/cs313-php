@@ -19,9 +19,6 @@
         <div id="center_info">
             <p id="about_me"><img src="matt_family.jpg">Hey everyone, my name is Matt Pickett. I'm a senior and I can't wait to graduate. My dream is to work as a software developer and live where there is lots of space and land to play on. I grew up in Peoria, AZ and lived about 5 min from the Phoenix temple.</p>
         </div>
-        <div class="assignments">
-            <p id="num">Here is a link to my assignments... 404</p>
-        </div>
+        <?php echo '<a href="assignments.php">My Assignments</a>' ?>
     </div>
-    <?php echo "hello this is php!"; ?>
 </body></html>
