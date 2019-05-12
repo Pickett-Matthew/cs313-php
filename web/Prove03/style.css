@@ -1,0 +1,12 @@
+table{
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+#shoppingBanner{
+    text-align: center;
+}
+#Cart-btn{
+    margin-left: 400px;
+}
