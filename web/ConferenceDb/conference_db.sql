@@ -30,3 +30,38 @@ conference_id 	int not null references public.conference(id),
 note_text 		text not null
 
 );
+
+
+insert into public.user values(
+default, 
+'matt-pickett',
+'password'
+);
+
+insert into public.speakers values(
+default, 
+'Holland'
+);
+
+insert into public.conference values(
+default, 
+true, 
+2012
+);
+
+insert into public.notes values(
+default, 
+1, 
+1, 
+1, 
+'Elder Holland gave an incredible talk about having faith in Jesus Christ'
+);
+ 
+select * from public.notes;
+
+
+
+
+
+
+
