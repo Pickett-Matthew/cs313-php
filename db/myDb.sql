@@ -1,30 +1,34 @@
-create table public.admin(
-id 			serial primary key, 
-user_name 	varchar not null, 
-password 	varchar not null
+create table myUsers(
+id 			serial not null, 
+username 	varchar(225), 
+password 	varchar(225),
+primary key (id) 
 );
 
-create table public.child(
-id 			serial primary key, 
-child_name 	varchar, 
-password 	varchar
+create table child (
+id 			serial, 
+childname 	varchar(225), 
+age 		int, 
+primary key (id)
 );
 
-create table public.chore(
-id 				serial primary key, 
-c_description 	text not null, 
-child 			integer references public.child(id), 
-due_date		date, 
-constraint fk_child foreign key(child) references public.child(id)
+create table chore (
+id 				serial, 
+workerID 		int not null, 			
+description 	text, 
+dueBy 			date, 
+primary key (id), 
+foreign key (workerId) references child(id)
 );
 
-insert into public.admin(user_name, password) values('matt Pickett', 'Pickett92');
+insert into myUsers(username, password) values ('matt Pickett', 'jordan');
+insert into myUsers(username, password) values ('whitney Pickett', 'ello');
 
-insert into public.child(child_name, password) values('Henry Pickett', 'Little');
+insert into child(childname, age) values ('henry Pickett', 12);
+insert into child(childname, age) values ('Jane Pickett', 9);
 
-insert into public.chore(c_description, child) values ('clean your room', 1);
+insert into chore(workerId, description, dueBy) values (1, 'clean your room', '2019-12-12');
+insert into chore(workerId, description, dueBy) values (2, 'wash the dishes', '2019-12-12');
 
-insert into public.chore(c_description, child) values ('Do the laundry', 1);
-
-insert into public.chore(c_description, child, due_date) values ('wash the dishes', 1, '2019-12-07');
-
+select * from chore;
+select * from child;
