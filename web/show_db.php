@@ -10,9 +10,9 @@
 <body>
     <h1>I am pulling info from my Database</h1>
     <?php 
-        foreach ($db->query('SELECT child_name, password FROM public.child') as $row)
+        foreach ($db->query('SELECT childname, password FROM child') as $row)
         {
-          echo 'user: ' . $row['child_name'];
+          echo 'user: ' . $row['childname'];
           echo ' password: ' . $row['password'];
           echo '<br/>';
         }
