@@ -19,7 +19,7 @@
             $workerId = $row['workerId'];
             $description = $row['description'];
             $dueBy = $row['dueBy'];
-            echo "<p><strong>$workerId $description $dueBy</strong><p>";
+            echo "<p><strong>$workerId $description $dueBy </strong><p>";
         }
     ?>
 </body>
