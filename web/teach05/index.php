@@ -10,10 +10,9 @@
 <body>
 <h1>Search for a book</h1>
 <?php
-    foreach($db->query('SELECT book, chapter, verse, content FROM scripture') as $row)
+    foreach($db->query('SELECT id, book, chapter, verse, content FROM scripture') as $row)
     {
-        echo $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . " " . $row['content'];
-        echo "</br>";
+        echo "<a href='details.php?bookId={$row['id']}'> {$row['book']} {$row['chapter']} {$row['verse']}</a>";
     }
 ?>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
