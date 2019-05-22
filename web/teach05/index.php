@@ -16,6 +16,18 @@
         echo "</br>";
     }
 ?>
-
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    Enter a Book name: <input type="text" name="book" id="bookSearch">
+    <button type="submit">Submit</button><br>
+    <?php 
+        if($_SERVER['REQUEST_METHOD'] == "POST") {
+            if(isset($_POST['book'])){
+                foreach($db->query("SELECT book, chapter, verse, content FROM scriptures WHERE book = '{$_POST['book']}';") as $item) {
+                    echo "<b>{$item['book']} {$item['chapter']} {$item['verse']} - {$item['content']}</b><br>";
+                }
+            }
+        }
+    ?>
+</form>
 </body>
 </html>
