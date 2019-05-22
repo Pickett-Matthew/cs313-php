@@ -9,11 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>display the book that was searched</h1>
+    <h1>display the Link</h1>
     <?php
     if (isset($_GET['bookId'])) {
         $bookId = $_GET['bookId'];
-        $item = $db->query("SELECT book, chapter, verse, content FROM scripture WHERE id = {$bookId};");
+        foreach($db->query("SELECT book, chapter, verse, content FROM scripture WHERE id = {$bookId};") as $item);
         echo "{$item['book']} {$item['chapter']}:{$item['verse']} - {$item['content']}";
     }
     ?>

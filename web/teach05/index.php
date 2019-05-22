@@ -12,7 +12,7 @@
 <?php
     foreach($db->query('SELECT id, book, chapter, verse, content FROM scripture') as $row)
     {
-        echo "<a href='details.php?bookId={$row['id']}'> {$row['book']} {$row['chapter']} {$row['verse']}</a>";
+        echo "<a href='details.php?bookId={$row['id']}'> {$row['book']} {$row['chapter']} {$row['verse']}</a><br>";
     }
 ?>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
