@@ -10,21 +10,14 @@
 <body>
 <h1>Search for a book</h1>
 <?php
-$whereClause = '';
-$myQuery = 'SELECT * FROM scriptures';
-//Look at PDO Bind Value example!
-if (isset($_POST['bookName'])) {
-    $myQuery .= ' WHERE book LIKE \'' . $_POST['bookName'] . '%\'';
-}
-foreach($db->query($myQuery) as $row)
-{
-    echo '<tr>';
-    echo '<td>' . $row['book'] . '</td>';
-    echo '<td>' . $row['chapter'] . '</td>';
-    echo '<td>' . $row['verse'] . '</td>';
-    echo '<td>' . $row['content'] . '</td>';
-    echo '</tr>';
-}
+    foreach ($db->query('SELECT book, chapter, verse FROM scripture') as $row)
+    {
+        echo 'book' . $row['book'];
+        echo 'chapter' . $row['chapter'];
+        echo 'verse' . $row['verse'];
+        echo '<br/>';
+    }
 ?>
+
 </body>
 </html>
