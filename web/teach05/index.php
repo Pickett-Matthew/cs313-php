@@ -10,12 +10,10 @@
 <body>
 <h1>Search for a book</h1>
 <?php
-    foreach ($db->query('SELECT book, chapter, verse FROM scripture') as $row)
+    foreach($db->query('SELECT book, chapter, verse, content FROM scripture') as $row)
     {
-        echo 'book' . " " . $row['book'];
-        echo 'chapter' . " " . $row['chapter'];
-        echo 'verse' . " " . $row['verse'];
-        echo '<br/>';
+        echo $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . " " . $row['content'];
+        echo "</br>";
     }
 ?>
 
