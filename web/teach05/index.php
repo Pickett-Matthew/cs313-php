@@ -9,20 +9,22 @@
 </head>
 <body>
 <h1>Search for a book</h1>
-    <?php 
-        $statement = $db->query('SELECT book, chapter, verse, content FROM scriptures');
-        $statement->execute();
-
-        foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
-        {
-            echo '<p><span>' . $row['book'] . $row['chapter'] . $row['verse'] . '</span>'  .$row['content'] . '</p>';
-        }
-    ?>
-
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?> ">
-        <label for="book">Search by book</label>
-        <input type="text" name="book" id="book" placeholder="Book">
-        <button type="submit">Search</button>
-    </form>
+<?php
+$whereClause = '';
+$myQuery = 'SELECT * FROM scriptures';
+//Look at PDO Bind Value example!
+if (isset($_POST['bookName'])) {
+    $myQuery .= ' WHERE book LIKE \'' . $_POST['bookName'] . '%\'';
+}
+foreach($db->query($myQuery) as $row)
+{
+    echo '<tr>';
+    echo '<td>' . $row['book'] . '</td>';
+    echo '<td>' . $row['chapter'] . '</td>';
+    echo '<td>' . $row['verse'] . '</td>';
+    echo '<td>' . $row['content'] . '</td>';
+    echo '</tr>';
+}
+?>
 </body>
 </html>
