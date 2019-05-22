@@ -12,9 +12,9 @@
 <?php
     foreach ($db->query('SELECT book, chapter, verse FROM scripture') as $row)
     {
-        echo 'book' . $row['book'];
-        echo 'chapter' . $row['chapter'];
-        echo 'verse' . $row['verse'];
+        echo 'book' . " " . $row['book'];
+        echo 'chapter' . " " . $row['chapter'];
+        echo 'verse' . " " . $row['verse'];
         echo '<br/>';
     }
 ?>
