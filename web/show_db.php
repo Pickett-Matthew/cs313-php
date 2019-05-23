@@ -10,10 +10,11 @@
 </head>
 <body>
     <h1>I am pulling info from my Database</h1>
+    <p>These are the children you have chores assigned for:</p>
     <?php 
         foreach($db->query('SELECT childname, age FROM child') as $row) 
         {
-            echo $row['childname'] . " is " . $row['age'] . " years old.";
+            echo "<p>{$row['childname']} {$row['age']} </p><br>";
         }
     ?>
 </body>
