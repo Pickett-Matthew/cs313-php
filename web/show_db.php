@@ -15,26 +15,12 @@
         <button type="submit" name="chores">Show Chores</button><br>
         <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
             if(isset($_POST['chores'])) {
-                foreach($db->query('SELECT description FROM chore') as $chore) {
-                    echo "<h4>{$chore['description']}</h4></br>";
+                foreach($db->query('SELECT description, workerID FROM chore') as $chore) {
+                    echo "<h4>{$chore['description']} {$chore['workerID']}</h4></br>";
                 }
             }
         }
         ?>
     </form>
-    <h1>Form ends below are other querys</h1>
-    <?php 
-        foreach($db->query('SELECT childname, age FROM child') as $row) 
-        {
-            echo "<p>{$row['childname']} {$row['age']}</p><br>";
-        }
-    ?>
-    <h1>There current chores are:</h1>
-    <?php 
-        foreach($db->query('SELECT description FROM chore') as $chore)
-        {
-            echo "<p>{$chore['description']}</p>";
-        }
-    ?>
 </body>
 </html>
