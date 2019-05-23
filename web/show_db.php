@@ -9,12 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>I am pulling info from my Database</h1>
-    <p>These are the children you have chores assigned for:</p>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <h1>Welcome to your virtual piggy bank!</h1>
+        <p>Click below to see the assigned chores for your children</p>
+        <button type="submit" name="chores">Show Chores</button><br>
+        <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
+            if(isset($_POST['chores'])) {
+                foreach($db->query('SELECT description FROM chore') as $chore) {
+                    echo "<h4>{$chore['description']}</h4></br>";
+                }
+            }
+        }
+        ?>
+    </form>
+    <h1>Form ends below are other querys</h1>
     <?php 
         foreach($db->query('SELECT childname, age FROM child') as $row) 
         {
-            echo "<p>{$row['childname']} {$row['age']} </p><br>";
+            echo "<p>{$row['childname']} {$row['age']}</p><br>";
+        }
+    ?>
+    <h1>There current chores are:</h1>
+    <?php 
+        foreach($db->query('SELECT description FROM chore') as $chore)
+        {
+            echo "<p>{$chore['description']}</p>";
         }
     ?>
 </body>
