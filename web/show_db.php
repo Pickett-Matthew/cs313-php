@@ -14,14 +14,14 @@
 <body>
     <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <h1>Welcome to your virtual piggy bank!</h1>
+            <h1>Welcome <?php echo $_POST['login']; ?>, to your virtual piggy bank!</h1>
             <p>Click below to see the assigned chores for your children</p>
             <button type="submit" name="chores" class="btn btn-info">Show Chores</button><br>
             <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
                 if(isset($_POST['chores'])) {
                     foreach($db->query('SELECT chore.description, child.childname from chore inner Join 
                     child on chore.workerId = child.id') as $chore) {
-                        echo "<h4> {$chore['description']} - {$chore['childname']} </h4></br>";
+                        echo "<h4> {$chore['childname']} - {$chore['description']} </h4></br>";
                     }
                 }
             }
