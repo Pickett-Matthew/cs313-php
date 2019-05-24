@@ -15,8 +15,8 @@
         <button type="submit" name="chores">Show Chores</button><br>
         <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
             if(isset($_POST['chores'])) {
-                foreach($db->query('SELECT description, workerID FROM chore') as $chore) {
-                    echo "<h4>{$chore['workerID']}</h4></br>";
+                foreach($db->query('SELECT c_value FROM chore') as $chore) {
+                    echo "<h4> {$chore['c_value']} </h4></br>";
                 }
             }
         }
