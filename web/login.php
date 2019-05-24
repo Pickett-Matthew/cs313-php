@@ -1,7 +1,5 @@
-<?php require 'connect.php' ?>
-<?php include 'navbar.php';
-    session_start();
-
+<?php require 'connect.php';
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
