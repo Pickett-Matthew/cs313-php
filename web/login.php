@@ -13,8 +13,8 @@
 </head>
 <body>
 <div class="container">
-  <h2>Inline form</h2>
-  <form class="form-inline" action="show_db.php">
+  <h2>Please enter you Username and Password</h2>
+  <form class="form-inline" action="show_db.php" method="POST">
     <div class="form-group">
       <label for="username">Username:</label>
       <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
