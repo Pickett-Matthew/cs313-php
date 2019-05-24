@@ -16,7 +16,7 @@
         <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
             if(isset($_POST['chores'])) {
                 foreach($db->query('SELECT description, workerID FROM chore') as $chore) {
-                    echo "<h4>{$chore['description']} {$chore['workerID']}</h4></br>";
+                    echo "<h4>{$chore['workerID']}</h4></br>";
                 }
             }
         }
