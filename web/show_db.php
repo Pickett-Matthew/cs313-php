@@ -15,8 +15,9 @@
         <button type="submit" name="chores">Show Chores</button><br>
         <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
             if(isset($_POST['chores'])) {
-                foreach($db->query('SELECT c_value FROM chore') as $chore) {
-                    echo "<h4> {$chore['c_value']} </h4></br>";
+                foreach($db->query('SELECT chore.description, child.childname from chore inner Join 
+                child on chore.workerId = child.id') as $chore) {
+                    echo "<h4> {$chore['description']} - {$chore['childname']} </h4></br>";
                 }
             }
         }
