@@ -28,16 +28,19 @@
             ?>
         </form>
     </div>
-    <div class="row">
+    <div>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <?php 
-        if($_SERVER['REQUEST_METHOD' == "POST"]) {
-            if(isset($_POST['child_entry']))
-                foreach($db->query("SELECT childname, age, bank from child WHERE childname = '{$_POST['child_entry']}';") as $entry) {
-                    echo "<p>{$entry['childname']} is {$entry['age']} years old and has ${$entry['bank']} 
-                            in his piggy bank.</p><br>";
+            if($_SERVER['REQUEST_METHOD' == "POST"]) {
+                if(isset($_POST['child_entry'])) {
+                    foreach($db->query("SELECT childname, age, bank from child WHERE childname = '{$_POST['child_entry']}';") as $entry) {
+                        echo "<p>{$entry['childname']} is {$entry['age']} years old and has ${$entry['bank']} 
+                               in his piggy bank.</p><br>";
+                    }
                 }
             }
         ?>
+    </form>
     </div>
 </body>
 </html>
