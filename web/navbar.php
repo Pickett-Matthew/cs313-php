@@ -23,9 +23,9 @@
     </ul>
     <form class="navbar-form navbar-left" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="piggy-banks" name="search">
+        <input type="text" class="form-control" placeholder="piggy-banks" name="child_entry">
       </div>
-      <button type="submit" class="btn btn-info" name="child_entry">Submit</button>
+      <button type="submit" class="btn btn-info">Submit</button>
     </form>
   </div>
 </nav>
