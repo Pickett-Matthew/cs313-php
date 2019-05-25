@@ -35,9 +35,9 @@
                 if($_SERVER['REQUEST_METHOD'] == "POST") {
                     if(isset($_POST['child'])){
                         foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['child']}';") as $item) {
-                            echo "<div class='list-group'><li class='list-group-item'> {$item['childname']} </li> 
+                            echo "<div class='list-group' style='width:200px;'><li class='list-group-item'> {$item['childname']} </li> 
                                   <li class='list-group-item'> {$item['age']} years old</li>
-                                  <li class='list-group-item'> {$item['bank']} in piggy bank</li>";
+                                  <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
                         }
                     }
                 }
