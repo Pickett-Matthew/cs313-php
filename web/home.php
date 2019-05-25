@@ -31,13 +31,11 @@
 
     <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            Enter a child name: <input type="text" name="child" id="childSearch">
-            <button type="submit">Submit</button><br>
             <?php 
                 if($_SERVER['REQUEST_METHOD'] == "POST") {
                     if(isset($_POST['child'])){
                         foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['child']}';") as $item) {
-                            echo "<b>{$item['childname']} {$item['age']} {$item['bank']}</b><br>";
+                            echo "<b>{$item['childname']} is {$item['age']} years old and has {$item['bank']} dollars in their piggy bank</b><br>";
                         }
                     }
                 }
