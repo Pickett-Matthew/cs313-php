@@ -33,8 +33,8 @@
         if($_SERVER['REQUEST_METHOD' == "POST"]) {
             if(isset($_POST['child_entry']))
                 foreach($db->query("SELECT childname, age, bank from child WHERE childname = '{$_POST['child_entry']}';") as $entry) {
-                    echo "{$entry['childname']} is {$entry['age']} years old and has ${$entry['bank']} 
-                            in his piggy bank.<br>";
+                    echo "<p>{$entry['childname']} is {$entry['age']} years old and has ${$entry['bank']} 
+                            in his piggy bank.</p><br>";
                 }
             }
         ?>
