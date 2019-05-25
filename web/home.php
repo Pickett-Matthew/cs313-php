@@ -28,20 +28,21 @@
             ?>
         </form>
     </div>
-    <div class="row">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-            Search by Child: <input type="text" name="search">
-            <button type="submit" class="btn btn-info">Search</button><br>
-        <?php 
-            if($_SERVER['REQUEST_METHOD' == "POST"]) {
-                if(isset($_POST['search'])) {
-                    foreach($db->query("SELECT childname, age, bank from child WHERE childname = '{$_POST['search']}';") as $entry) {
-                        echo "<p>{$entry['childname']} {$entry['age']} {$entry['bank']}</p><br>";
+
+    <div class="container">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            Enter a Book name: <input type="text" name="child" id="childSearch">
+            <button type="submit">Submit</button><br>
+            <?php 
+                if($_SERVER['REQUEST_METHOD'] == "POST") {
+                    if(isset($_POST['child'])){
+                        foreach($db->query("SELECT childname, age, bank FROM child WHERE child = '{$_POST['child']}';") as $item) {
+                            echo "<b>{$item['childname']} {$item['age']} {$item['bank']}</b><br>";
+                        }
                     }
                 }
-            }
-        ?>
-    </form>
+            ?>
+        </form>
     </div>
 </body>
 </html>
