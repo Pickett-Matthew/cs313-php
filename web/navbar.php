@@ -21,9 +21,9 @@
       <li><a href="home.php">Home</a></li>
       <li><a href="login.php">Login</a></li>
     </ul>
-    <form class="navbar-form navbar-left" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form class="navbar-form navbar-left" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="piggy-banks" name="child_entry">
+        <input type="text" class="form-control" placeholder="piggy-banks" name="search">
       </div>
       <button type="submit" class="btn btn-info">Submit</button>
     </form>
