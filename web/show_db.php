@@ -21,7 +21,7 @@
                 if(isset($_POST['chores'])) {
                     foreach($db->query('SELECT chore.description, child.childname from chore inner Join 
                     child on chore.workerId = child.id') as $chore) {
-                        echo "<h4> {$chore['childname']} - {$chore['description']} </h4></br>";
+                        echo "<h4> <span class='glyphicon glyphicon-ok'>{$chore['childname']}</span> - {$chore['description']} </h4></br>";
                     }
                 }
             }

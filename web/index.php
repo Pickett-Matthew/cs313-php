@@ -7,6 +7,7 @@
     <title>Landing</title>
 </head>
 <body>
-    
+    <h1>Welcome</h1>
+    <button><a href="login.php">Go to my current project</a></button>
 </body>
 </html>

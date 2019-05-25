@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-  <h2>Please enter you Username and Password</h2>
+  <h2 class="p-3">Please enter you Username and Password</h2>
   <form class="form-inline" action="show_db.php" method="POST">
     <div class="form-group">
       <label for="username">Username:</label>
@@ -27,7 +27,7 @@
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="btn btn-info" class="btn btn-default">Submit</button>
   </form>
 </div>
 </body>

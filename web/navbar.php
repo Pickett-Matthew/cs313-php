@@ -20,6 +20,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li><a href="show_db.php">Database</a></li>
+      <li><a href="login.php">Login</a></li>
     </ul>
     <form class="navbar-form navbar-left" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
       <div class="form-group">
