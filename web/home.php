@@ -21,12 +21,24 @@
                 if(isset($_POST['chores'])) {
                     foreach($db->query('SELECT chore.description, child.childname from chore inner Join 
                     child on chore.workerId = child.id') as $chore) {
-                        echo "<h4> <span class='glyphicon glyphicon-ok'>{$chore['childname']}</span> - {$chore['description']} </h4></br>";
+                        echo "<h4 class='row'><p class='glyphicon glyphicon-ok'> {$chore['childname']}</p> - {$chore['description']}</h4></br>";
                     }
                 }
             }
             ?>
         </form>
+    </div>
+    <div class="row">
+        <?php 
+            if(isset($_GET['child_entry']))  {
+                $child_info = $_GET['child_entry'];
+                foreach($db->query("SELECT childname, age, bank from child WHERE child_entry = {$child_info}; ") as $entry) {
+                    echo "{$entry['childname']} is {$entry['age']} years old and has ${$entry['bank']} 
+                            in his piggy bank.<br>";
+                }
+            }
+
+        ?>
     </div>
 </body>
 </html>
