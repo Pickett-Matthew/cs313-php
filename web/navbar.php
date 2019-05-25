@@ -26,6 +26,18 @@
         <input type="text" class="form-control" placeholder="piggy-banks" name="child_entry">
       </div>
       <button type="submit" class="btn btn-info">Submit</button>
+      
+      <div class="row">
+        <?php 
+            if($_SERVER['REQUEST_METHOD' == "POST"]) {
+                if(isset($_POST['child_entry']))
+                  foreach($db->query("SELECT childname, age, bank from child WHERE childname = '{$_POST['child_entry']}';") as $entry) {
+                      echo "<p>{$entry['childname']} is {$entry['age']} years old and has ${$entry['bank']} 
+                               in his piggy bank.</p><br>";
+                }
+            }
+        ?>
+    </div>
     </form>
   </div>
 </nav>
