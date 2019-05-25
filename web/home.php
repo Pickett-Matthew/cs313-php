@@ -29,13 +29,15 @@
         </form>
     </div>
 
-    <div class="well">
+    <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <?php 
                 if($_SERVER['REQUEST_METHOD'] == "POST") {
                     if(isset($_POST['child'])){
                         foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['child']}';") as $item) {
-                            echo "<b class='row'>{$item['childname']} is {$item['age']} years old and has {$item['bank']} dollars in their piggy bank</b><br>";
+                            echo "<div class='list-group'><li class='list-group-item'> {$item['childname']} </li> 
+                                  <li class='list-group-item'> {$item['age']} years old</li>
+                                  <li class='list-group-item'> {$item['bank']} in piggy bank</li>";
                         }
                     }
                 }
