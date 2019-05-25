@@ -23,7 +23,7 @@
     </ul>
     <form class="navbar-form navbar-left" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="piggy-banks">
+        <input type="text" class="form-control" placeholder="piggy-banks" name="child" id="childSearch">
       </div>
       <button type="submit" class="btn btn-info">Submit</button>
     </form>
