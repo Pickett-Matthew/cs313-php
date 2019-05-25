@@ -28,8 +28,10 @@
             ?>
         </form>
     </div>
-    <div>
+    <div class="row">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+            Search by Child: <input type="text" name="search">
+            <button type="submit" class="btn btn-info">Search</button><br>
         <?php 
             if($_SERVER['REQUEST_METHOD' == "POST"]) {
                 if(isset($_POST['search'])) {
