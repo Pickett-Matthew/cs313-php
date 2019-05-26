@@ -15,7 +15,8 @@
     <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <h1>Welcome <?php echo $_POST['username']; ?>, to your virtual piggy bank!</h1>
-            <p>Click below to see the assigned chores for your children</p>
+            <p class="row">Click below to see the assigned chores for your children</p>
+            <p class="row">Use search bar to query by Name. ('Henry Pickett')</p>
             <button type="submit" name="chores" class="btn btn-info">Show Chores</button><br>
             <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
                 if(isset($_POST['chores'])) {
