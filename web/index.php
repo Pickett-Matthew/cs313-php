@@ -19,8 +19,8 @@
             
             <?php 
                 foreach($db->query('SELECT id, name FROM topic') as $row) {
-                    echo $row['id'];
-                    echo $row['name'];
+
+                    echo"{$row['id']} || {$row['name']}<br>";
                 }
             ?>
         </form>
