@@ -19,8 +19,9 @@
             
             <?php 
                 foreach($db->query('SELECT id, name FROM topic') as $row) {
-
-                    echo"{$row['id']} || {$row['name']}<br>";
+                    $id = $row['id'];
+                    echo "<input type='checkbox' name='boxes[]' id=$id>";
+                    echo $row['name'];
                 }
             ?>
         </form>
