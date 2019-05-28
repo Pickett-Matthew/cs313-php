@@ -1,4 +1,4 @@
-<?php include '/week05/connect.php' ?>
+<?php include 'connect.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
