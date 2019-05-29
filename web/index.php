@@ -21,7 +21,7 @@
                 foreach($db->query('SELECT id, name FROM topic') as $row) {
                     $id = $row['id'];
                     echo "<input type='checkbox' name='boxes[]' id='boxes$id' value='$id'>";
-                    echo "<label for='boxes$id'>$name</label><br>";
+                    echo "<label for='boxes$id'>{$row['name']}</label><br>";
                 }
             ?>
 
