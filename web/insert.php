@@ -36,9 +36,9 @@ $topicIds = $_POST['boxes'];
             echo "Scripture ID: $scriptureID, TopicID: $topicId";
 
             $statement = $db->prepare('INSERT into linkscript(scripture_id, topic_id)
-            VALUES(:scriptureID, :topicId)');
+            VALUES(:scripture_id, :topic_id)');
 
-            $statement->bindValue(':scripture_is', $scriptureID);
+            $statement->bindValue(':scripture_id', $scriptureID);
             $statement->bindValue(':topic_id', $topicId);
 
             $statement->execute();
