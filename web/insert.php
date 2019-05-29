@@ -38,8 +38,8 @@ $topicIds = $_POST['boxes'];
             $statement = $db->prepare('INSERT into linkscript(scripture_id, topic_id)
             VALUES(:scriptureID, :topicId)');
 
-            $statement->bindValue(':scriptureID', $scriptureID);
-            $statement->bindValue(':topicID', $topicId);
+            $statement->bindValue(':scripture_is', $scriptureID);
+            $statement->bindValue(':topic_id', $topicId);
 
             $statement->execute();
         }
