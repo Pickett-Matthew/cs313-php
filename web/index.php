@@ -15,7 +15,7 @@
             <input type="text" name="book" Placeholder="Book"><br>
             <input type="text" name="chapter" Placeholder="Chapter"><br>
             <input type="text" name="verse" Placeholder="Verse"><br>
-            <input type="textarea" name="content" rows=3><br>
+            <input type="textarea" name="content" rows=3 columns=40><br>
             
             <?php 
                 foreach($db->query('SELECT id, name FROM topic') as $row) {

@@ -29,6 +29,21 @@ $content = $_POST['content'];
 
         $statement->execute();
 
+        $scriptureID = $db->lastInsertID("scripture_id_seq");
+
+        foreach($topicIds as $topicId) {
+            echo "Scripture ID: $scriptureID, TopicID: $topicId";
+
+            $statement = $db->prepare('INSERT into linkScript(scriptureID, topicID)
+            VALUES(:scriptureID, :topicId)');
+
+            $statement->bindValue(':scriptureID', $scriptureID);
+            $statement->bindValue(':topicID', $topicId);
+
+            $statement->execute();
+        }
+
+
         header("Location: index.php")
         ?>
 
