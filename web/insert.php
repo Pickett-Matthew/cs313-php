@@ -28,8 +28,11 @@ $content = $_POST['content'];
         $statement->bindValue(':content', $content);
 
         $statement->execute();
+
+        header("Location: index.php")
         ?>
 
     </div>
+    
 </body>
 </html>
