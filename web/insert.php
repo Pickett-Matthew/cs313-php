@@ -5,6 +5,7 @@ $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
 $content = $_POST['content'];
+$topicIds = $_POST['boxes'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +35,7 @@ $content = $_POST['content'];
         foreach($topicIds as $topicId) {
             echo "Scripture ID: $scriptureID, TopicID: $topicId";
 
-            $statement = $db->prepare('INSERT into linkscript(scriptureID, topicID)
+            $statement = $db->prepare('INSERT into linkscript(scripture_Id, topic_Id)
             VALUES(:scriptureID, :topicId)');
 
             $statement->bindValue(':scriptureID', $scriptureID);
