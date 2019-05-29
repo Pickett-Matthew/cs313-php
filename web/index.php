@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class='container'>
-        <form action="">
+        <form action="insert.php" method="POST">
             <p>Insert a New Scripture</p>
-            <input type="text" name="book"><br>
-            <input type="text" name="chapter"><br>
-            <input type="text" name="verse"><br>
+            <input type="text" name="book" Placeholder="Book"><br>
+            <input type="text" name="chapter" Placeholder="Chapter"><br>
+            <input type="text" name="verse" Placeholder="Verse"><br>
             <input type="textarea" name="content" rows=3><br>
             
             <?php 
@@ -24,6 +24,8 @@
                     echo $row['name'];
                 }
             ?>
+
+                Submit: <input type="submit" value="Add to DB">
         </form>
     </div>
 </body>
