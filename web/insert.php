@@ -35,7 +35,7 @@ $topicIds = $_POST['boxes'];
         foreach($topicIds as $topicId) {
             echo "Scripture ID: $scriptureID, TopicID: $topicId";
 
-            $statement = $db->prepare('INSERT into linkscript(scripture_Id, topic_Id)
+            $statement = $db->prepare('INSERT into linkscript(scripture_id, topic_id)
             VALUES(:scriptureID, :topicId)');
 
             $statement->bindValue(':scriptureID', $scriptureID);
