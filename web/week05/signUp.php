@@ -1,4 +1,5 @@
 <?php include 'connect.php' ?>
+<?php include 'navbar.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
 
             <label for="confirm_password">Confirm Password</label>
             <input type="password" name="confirm_password" id="confirm_password_id">
-            
+
             <button type="submit" class="btn btn-info">Submit</button>
         </form>
     </div>
