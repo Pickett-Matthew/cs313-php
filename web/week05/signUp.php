@@ -12,15 +12,21 @@
 <body>
     <div class="container-fluid">
         <h2>Sign Up</h2>
-        <form action="createAcct.php" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name_id"><br>
+        <form action="createAcct.php" method="POST" class="form-horizontal">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name_id"><br>
+            </div>
 
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password_id"><br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password_id"><br>
+            </div>
 
-            <label for="confirm_password">Confirm Password</label>
-            <input type="password" name="confirm_password" id="confirm_password_id">
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password_id">
+            </div>
 
             <button type="submit" class="btn btn-info">Submit</button>
         </form>
