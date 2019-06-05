@@ -13,6 +13,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+<?php 
+  
+?>
 <div class="container">
   <h2 class="p-3">Please enter you Username and Password</h2>
   <form class="form-inline" action="home.php" method="POST">
