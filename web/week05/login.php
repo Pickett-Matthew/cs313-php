@@ -29,7 +29,11 @@
     </div>
     <button type="btn btn-info" class="btn btn-default">Submit</button>
   </form>
-  <p class="p-3">Create an account<button class="btn btn-info">START</button></p>
+</div>
+<hr class="my-4">
+<div class="jumbotron">
+  <p class="lead">Create a new account here!</p><br>
+  <button class="btn btn-primary btn-sm">Sign Up</button>
 </div>
 </body>
 </html>
