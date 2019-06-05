@@ -14,17 +14,17 @@
         <h2>Sign Up</h2>
         <form action="createAcct.php" method="POST" class="form-horizontal">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name" class="col-sm-2 control-label">Name</label>
                 <input type="text" name="name" id="name_id" class="form-control"><br>
             </div>
 
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password" class="col-sm-2 control-label">Password</label>
                 <input type="password" name="password" id="password_id" class="form-control"><br>
             </div>
 
             <div class="form-group">
-                <label for="confirm_password">Confirm Password</label>
+                <label for="confirm_password" class="col-sm-2 control-label">Confirm Password</label>
                 <input type="password" name="confirm_password" id="confirm_password_id" class="form-control">
             </div>
 
