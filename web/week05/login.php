@@ -1,6 +1,41 @@
 <?php require 'connect.php' ?>
 <?php include 'navbar.php' ?>
 
+
+<?php 
+session_start();
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$query = 'SELECT password from login WHERE username =:username';
+
+$statement = $db->prepare($query);
+$statement->bindValue(':username', $username);
+$result = $statement->execute();
+
+if($result)
+{
+  $row = $statement->fetch();
+  $pw = $row['password'];
+
+  if($password == $pw)
+  {
+    $_SESSION['username'] == $username;
+    header("Location: home.php");
+    die();
+  }
+  else
+  {
+    echo "incorrect data!";
+  }
+}
+else
+{
+  echo "bad result!";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +48,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php 
-  
-?>
 <div class="container">
   <h2 class="p-3">Please enter you Username and Password</h2>
   <form class="form-inline" action="home.php" method="POST">
@@ -24,8 +56,8 @@
       <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
     </div>
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>
