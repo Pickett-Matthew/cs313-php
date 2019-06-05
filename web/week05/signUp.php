@@ -15,17 +15,17 @@
         <form action="createAcct.php" method="POST" class="form-horizontal">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name_id" class="form-control><br>
+                <input type="text" name="name" id="name_id" class="form-control"><br>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password_id" class="form-control><br>
+                <input type="password" name="password" id="password_id" class="form-control"><br>
             </div>
 
             <div class="form-group">
                 <label for="confirm_password">Confirm Password</label>
-                <input type="password" name="confirm_password" id="confirm_password_id" class="form-control>
+                <input type="password" name="confirm_password" id="confirm_password_id" class="form-control">
             </div>
 
             <button type="submit" class="btn btn-info">Submit</button>
