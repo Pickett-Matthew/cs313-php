@@ -10,7 +10,7 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <h2>Sign Up</h2>
         <form action="createAcct.php" method="POST" class="form-horizontal">
             <div class="form-group">
