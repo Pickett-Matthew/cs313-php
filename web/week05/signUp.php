@@ -14,8 +14,8 @@
         <h2>Sign Up</h2>
         <form action="createAcct.php" method="POST" class="form-horizontal">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name_id" class="form-control"><br>
+                <label for="username">Name</label>
+                <input type="text" name="username" id="name_id" class="form-control"><br>
             </div>
 
             <div class="form-group">
