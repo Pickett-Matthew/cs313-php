@@ -29,6 +29,7 @@
     </div>
     <button type="btn btn-info" class="btn btn-default">Submit</button>
   </form>
+  <p class="p-3">Create an account<button class="btn btn-info">START</button></p>
 </div>
 </body>
 </html>
