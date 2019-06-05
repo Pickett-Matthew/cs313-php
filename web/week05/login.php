@@ -31,9 +31,11 @@
   </form>
 </div>
 <hr class="my-4">
-<div class="jumbotron">
-  <p class="lead">Create a new account here!</p><br>
-  <button class="btn btn-primary btn-sm">Sign Up</button>
+<div class="container">
+  <div class="jumbotron">
+    <p class="lead">Create a new account here!</p><br>
+    <button class="btn btn-primary btn-sm">Sign Up</button>
+  </div>
 </div>
 </body>
 </html>
