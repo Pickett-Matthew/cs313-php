@@ -67,8 +67,8 @@ if($badLogin)
                 </div>
                 <button class="btn btn-primary" type="submit">Sign In</button>
             </div>
-        </form>
-        <p>Don't have an account?<button class="btn btn-outline-primary"><a href="SignUp.php">Sign Up</a></button></p>
+        </form><br>
+        <h6>Don't have an account?<button class="btn btn-outline-primary btn-sm"><a href="SignUp.php">Sign Up</a></button></h6>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
