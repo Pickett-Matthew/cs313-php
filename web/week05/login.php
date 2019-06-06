@@ -3,17 +3,18 @@
 
 
 <?php 
+
 session_start();
 
-if(isset($_POST['username'] && isset($_POST['password']))
+if(isset($_POST['username']) && isset($_POST['password']))
 {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  $query = 'SELECT password from login WHERE username =:username';
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $query = 'SELECT password from login WHERE username =:username';
 
-  $statement = $db->prepare($query);
-  $statement->bindValue(':username', $username);
-  $result = $statement->execute();
+    $statement = $db->prepare($query);
+    $statement->bindValue(':username', $username);
+    $result = $statement->execute();
 
     if($result)
     {
@@ -30,15 +31,12 @@ if(isset($_POST['username'] && isset($_POST['password']))
         {
           echo "incorrect data!";
         }
-        
+
     }
-    else
-    {
-      echo "bad result!";
-    }
-
-
-
+}
+else
+{
+  echo "bad result!";
 }
 
 ?>
