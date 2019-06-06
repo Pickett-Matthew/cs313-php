@@ -66,11 +66,11 @@ if($badLogin)
         <div class="row justify-content-center p-5">
             <form action="signIn.php" method="POST">
                 <div class="form-row align-items-center p-5">
-                    <div class="col-auto p-5">
+                    <div class="row p-5">
                         <input class="form-control mb-2" type="text" name="txtName" id="txtName" Placeholder="Username">
                     </div>
 
-                    <div class="col-auto">
+                    <div class="row p-5">
                         <input class="form-control mb-2" type="password" id="txtPassword" name="txtPassword" Placeholder="password">
                     </div>
                     <button class="btn btn-primary" type="submit">Sign In</button>
