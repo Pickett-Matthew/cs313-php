@@ -78,7 +78,7 @@ else
                                     }
                                 ?>
                             </div>
-                            
+
                             <hr>
 
                             <div class="form-group">
@@ -88,7 +88,7 @@ else
 
                             <hr>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group-sm ">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">$</span>
                                 </div>
