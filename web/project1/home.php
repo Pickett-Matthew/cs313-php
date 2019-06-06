@@ -56,10 +56,14 @@ else
     <div class="container">
         <?php 
             $option = $_POST['option'];
-            echo $option['childname'];
+            foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = $option")as $item)
+            {
+                echo $item['childname'] . " " . $item['age'] . " " . $item['bank'];
+
+            }
         ?>
     </div>
-    
+
 
 
 
