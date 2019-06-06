@@ -77,18 +77,16 @@ else
                                         echo "<button type='button' class='btn btn-primary'>$child</button><br>";
                                     }
                                 ?>
-                        </div>
-
-                        <h6>Describe the Chore</h6><hr>
+                            </div>
+                            <hr>
                             <div class="form-group">
                                     <label for="description">Description</label>
                                     <input type="text" class="form-control" name="description">
-                            </div>
-
-                        <h6>Enter a Value</h6><hr>    
+                            </div>   
+                            <hr>
                             <div class="form-group">
                                     <label for="chore_value">Value</label>
-                                    <input type="number" class="form-control" name="chore_value">
+                                    <input type="number" class="form-control col-xs-1" name="chore_value">
                             </div>
                     </form>
                 </div>
