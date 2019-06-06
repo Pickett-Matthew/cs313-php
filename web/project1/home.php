@@ -56,7 +56,7 @@ else
                                 }
                             ?>
                         </select>
-                        <button type="submit" class="btn btn-info my-2"></button>
+                        <button type="submit" class="btn btn-info my-2">Search</button>
                 </form>
             </div>
         </div>
