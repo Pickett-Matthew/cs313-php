@@ -69,7 +69,7 @@ else
                     <hr>
                     <form action="addChore.php" method="post">
                         <h6><small>Chose Child</small></h6>
-                            <div class="btn-group">
+                            <div class="btn-group btn-group-lg">
                                 <?php
                                     foreach($db->query('SELECT childname FROM child')as $row)
                                     {
@@ -78,6 +78,18 @@ else
                                     }
                                 ?>
                         </div>
+
+                        <h6>Describe the Chore</h6><hr>
+                            <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <input type="text" class="form-control" name="description">
+                            </div>
+
+                        <h6>Enter a Value</h6><hr>    
+                            <div class="form-group">
+                                    <label for="chore_value">Value</label>
+                                    <input type="number" class="form-control" name="chore_value">
+                            </div>
                     </form>
                 </div>
         </div> <!-- columns -->
