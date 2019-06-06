@@ -56,9 +56,7 @@ else
                                 }
                             ?>
                         </select>
-                        <button type="submit" class="btn btn-default">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
+                        <button type="submit" class="glyphicon glyphicon-search"></button>
                 </form>
             </div>
         </div>
