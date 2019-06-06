@@ -5,34 +5,40 @@
 <?php 
 session_start();
 
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-$query = 'SELECT password from login WHERE username =:username';
-
-$statement = $db->prepare($query);
-$statement->bindValue(':username', $username);
-$result = $statement->execute();
-
-if($result)
+if(isset($_POST['username'] && isset($_POST['password']))
 {
-  $row = $statement->fetch();
-  $pw = $row['password'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $query = 'SELECT password from login WHERE username =:username';
 
-  if($password == $pw)
-  {
-    $_SESSION['username'] == $username;
-    header("Location: home.php");
-    die();
-  }
-  else
-  {
-    echo "incorrect data!";
-  }
-}
-else
-{
-  echo "bad result!";
+  $statement = $db->prepare($query);
+  $statement->bindValue(':username', $username);
+  $result = $statement->execute();
+
+    if($result)
+    {
+        $row = $statement->fetch();
+        $pw = $row['password'];
+
+        if($password == $pw)
+        {
+          $_SESSION['username'] == $username;
+          header("Location: home.php");
+          die();
+        }
+        else
+        {
+          echo "incorrect data!";
+        }
+        
+    }
+    else
+    {
+      echo "bad result!";
+    }
+
+
+
 }
 
 ?>
