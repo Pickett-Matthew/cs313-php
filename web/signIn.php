@@ -60,12 +60,11 @@ if($badLogin)
             <div class="form-row align-items-center">
                 <div class="col-auto">
                     <label for="txtName">Username</label><br>
-                    <input class="form-control mb-2" type="text" name="txtName" id="txtName">
+                    <input class="form-control mb-2" type="text" name="txtName" id="txtName" Placeholder="Username">
                 </div>
 
                 <div class="col-auto">
-                    <label  for="txtPassword">Password</label><br>
-                    <input class="form-control mb-2" type="password" id="txtPassword" name="txtPassword">
+                    <input class="form-control mb-2" type="password" id="txtPassword" name="txtPassword" Placeholder="password">
                 </div>
                 <button class="btn btn-primary" type="submit">Sign In</button>
             </div>
