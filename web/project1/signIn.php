@@ -64,9 +64,9 @@ if($badLogin)
     </nav>
     <div class="container">
         <h2>Sign In</h2>
-        <div class="row justify-content-center p-5">
+        <div class="row justify-content-center m-1">
             <form action="signIn.php" method="POST">
-                <div class="form-row align-items-center p-5">
+                <div class="form-row align-items-center m-1">
                     <div class="row p-5">
                         <input class="form-control mb-2" type="text" name="txtName" id="txtName" Placeholder="Username">
                     </div>

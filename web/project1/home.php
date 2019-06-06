@@ -42,6 +42,7 @@ else
     
     <div class="container-fluid">
 
+        <!-- input field to select Active chores from child table --> 
         <div class="row content">
             <div class="col-sm-3 sidenav">
                 <h4>Active Chores</h4>
@@ -61,6 +62,7 @@ else
             </div>
         </div>
 
+        <!-- displays the name, age, and bank of child selected --> 
         <div class="container-fluid">
             <div class="row content">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -79,7 +81,13 @@ else
             </div>
         </div>
 
-    </div>
+        <!-- Add a new chore to database --> 
+        <div class="col-sm-9">
+         
+        </div>
+
+
+</div> <!-- main div container --> 
 
 
 
