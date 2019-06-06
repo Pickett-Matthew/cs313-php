@@ -54,7 +54,7 @@ else
        <button type="submit">Submit</button>
     </form>
 
-    <div class="container">
+    <div class="container-fluid">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <?php 
                 if($_SERVER['REQUEST_METHOD'] == "POST") {
