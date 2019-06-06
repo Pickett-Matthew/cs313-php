@@ -6,13 +6,13 @@
 // data into the database
 
 //my variables
-$username = $_POST['username'];
-$password = $_POST['password'];
-$query = 'INSERT into login(username, password) values(:username, :password)';
+$username = $_POST['txtusername'];
+$password = $_POST['txtpassword'];
+$query = 'INSERT into login(username, password) values(:txtusername, :txtpassword)';
 
 $statement = $db->prepare($query);
-$statement->bindValue(':username', $username);
-$statement->bindValue(':password', $password);
+$statement->bindValue(':txtusername', $username);
+$statement->bindValue(':txtpassword', $password);
 
 $statement->execute();
 
