@@ -9,7 +9,6 @@ if(isset($_POST['txtName']) && isset($_POST['txtPassword']))
 {
     $username = $_POST['txtName'];
     $password = $_POST['txtPassword'];
-
     $query = 'SELECT password FROM login WHERE username=:username';
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $username);
@@ -49,10 +48,10 @@ if(isset($_POST['txtName']) && isset($_POST['txtPassword']))
 </head>
 <body>
 <?php 
-    if($badLogin)
-    {
-        echo "Incorrect username or password!<br>";
-    }
+if($badLogin)
+{
+    echo "Incorrect username or password!<br>";
+}
 ?>
     <form action="signIn.php" method="POST">
         <input type="text" name="txtName" id="txtName">
@@ -64,5 +63,6 @@ if(isset($_POST['txtName']) && isset($_POST['txtPassword']))
         <input type="submit" value="Sign In">
 
     </form>
+    <p>Don't have an account? <button><a href="SingUp.php">Sign Up</a></button></p>
 </body>
 </html>
