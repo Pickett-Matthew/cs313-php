@@ -10,7 +10,7 @@ if(isset($_SESSION['username']))
 }
 else
 {
-    header("Location: signUp.php");
+    header("Location: signIn.php");
     die();
 }
 ?>
