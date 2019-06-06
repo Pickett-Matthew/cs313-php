@@ -58,7 +58,8 @@ if($badLogin)
 <body>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="" alt="">
+            <img src="piggy.jpg" width="30" height="30" alt="">
+            Virtual Piggy Bank
         </a>
     </nav>
     <div class="container">
