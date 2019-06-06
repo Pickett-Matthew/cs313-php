@@ -39,9 +39,9 @@ else
         </ul>
     </nav>
     <h1>Welome to the home page, <?=$username ?></h1>
-   <form action="" method="post">
+   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  method="post">
         <select name="option" class="custom-select">
-            <option selected>Choose Here</option>
+            <option selected></option>
             <?php 
                 foreach($db->query('SELECT childname FROM child')as $row)
                 {
