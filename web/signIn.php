@@ -59,7 +59,6 @@ if($badLogin)
         <form action="signIn.php" method="POST">
             <div class="form-row align-items-center">
                 <div class="col-auto">
-                    <label for="txtName">Username</label><br>
                     <input class="form-control mb-2" type="text" name="txtName" id="txtName" Placeholder="Username">
                 </div>
 
@@ -69,7 +68,7 @@ if($badLogin)
                 <button class="btn btn-primary" type="submit">Sign In</button>
             </div>
         </form>
-        <p>Don't have an account? <button><a href="SignUp.php">Sign Up</a></button></p>
+        <p>Don't have an account?<button class="btn btn-outline-primary"><a href="SignUp.php">Sign Up</a></button></p>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
