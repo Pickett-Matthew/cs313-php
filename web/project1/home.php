@@ -92,7 +92,7 @@ else
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">$</span>
                                 </div>
-                                    <input type="text" class="form-control-sm" name="chore-value" aria-label="Amount (to the nearest dollar)">
+                                    <input type="text" class="form-control-xs" name="chore-value" aria-label="Amount (to the nearest dollar)">
                                 <div class="input-group-append">
                                     <span class="input-group-text">.00</span>
                                 </div>
