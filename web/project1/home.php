@@ -50,21 +50,12 @@ else
                 }
             ?>
         </select>
-        <input type="submit" value="submit form"/>
     </form>
 
-    <div class="container">
-        <?php
-        //$option holds the name of the selected child
-        $option = $_POST['option']; 
-            foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = $option")as $item)
-        {
-            echo "<div class='list-group' style='width:200px;'><li class='list-group-item'> {$item['childname']} </li> 
-                                  <li class='list-group-item'> {$item['age']} years old</li>
-                                  <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
-        }
-        ?>
-    </div>
+    <?php
+        echo $child;
+    ?>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
