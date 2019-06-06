@@ -46,7 +46,7 @@ else
 
         <!-- input field to select Active chores from child table --> 
         <div class="row content">
-            <div class="col-sm-3 sidenav">
+            <div class="col-sm-4 sidenav">
                 <h4>Active Chores</h4>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <select name="option" class="custom-select">
@@ -64,7 +64,7 @@ else
             </div>
 
                 <!-- Add a new chore to database --> 
-                <div class="col-sm-9">
+                <div class="col-sm-8">
                     <h4><small>Add a Chore</small></h4>
                     <hr>
                     <form action="addChore.php" method="post">
