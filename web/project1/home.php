@@ -40,7 +40,7 @@ else
     </nav>
     <h1>Welome to the home page, <?=$username ?></h1>
    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <select name="child" class="custom-select">
+        <select name="option" class="custom-select">
             <option selected>Choose Here</option>
             <?php 
                 foreach($db->query('SELECT childname FROM child')as $row)
@@ -53,19 +53,16 @@ else
     </form>
 
     <div class="container">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <?php 
-                if($_SERVER['REQUEST_METHOD'] == "POST") {
-                    if(isset($_POST['child'])){
-                        foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['child']}';") as $item) {
-                            echo "<div class='list-group' style='width:200px;'><li class='list-group-item'> {$item['childname']} </li> 
+        <?php
+        //$option holds the name of the selected child
+        $option = $_POST['option']; 
+        foreach($db->query('SELECT childname, age, bank FROM child WHERE childname = $option')as $item)
+        {
+            echo "<div class='list-group' style='width:200px;'><li class='list-group-item'> {$item['childname']} </li> 
                                   <li class='list-group-item'> {$item['age']} years old</li>
                                   <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
-                        }
-                    }
-                }
-            ?>
-        </form>
+        }
+        ?>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
