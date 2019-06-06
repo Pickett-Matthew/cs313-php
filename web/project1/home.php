@@ -40,7 +40,7 @@ else
     </nav>
     <h1>Welome to the home page, <?=$username ?></h1>
 
-   <form method="post">
+   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <select name="option" class="custom-select">
             <option selected><i>Choose from below<i></option>
             <?php 
