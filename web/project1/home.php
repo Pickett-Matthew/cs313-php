@@ -51,6 +51,7 @@ else
                 }
             ?>
         </select>
+       <button type="submit">Submit</button>
     </form>
 
     <div class="container">
