@@ -15,12 +15,12 @@
         <form action="createAcct.php" method="POST" class="form-horizontal">
             <div class="form-group">
                 <label for="username">Name</label>
-                <input type="text" name="username" id="name_id" class="form-control"><br>
+                <input type="text" name="txtusername" id="name_id" class="form-control"><br>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password_id" class="form-control"><br>
+                <input type="password" name="txtpassword" id="password_id" class="form-control"><br>
             </div>
 
             <div class="form-group">

@@ -5,11 +5,12 @@
 <?php 
 
 session_start();
+$badLogin = false;
 
-if(isset($_POST['username']) && isset($_POST['password']))
+if(isset($_POST['txtusername']) && isset($_POST['txtpassword']))
 {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['txtusername'];
+    $password = $_POST['txtpassword'];
     $query = 'SELECT password from login WHERE username =:username';
 
     $statement = $db->prepare($query);
