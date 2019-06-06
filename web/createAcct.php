@@ -7,7 +7,7 @@ $password = $_POST['txtPassword'];
 if(!isset($username) || $username==""
     || !isset($password) || $password=="")
     {
-        header("Location: signUp.php");
+        header("Location: SignUp.php");
         die();
     }
 
