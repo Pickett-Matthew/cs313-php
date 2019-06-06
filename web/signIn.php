@@ -63,6 +63,6 @@ if($badLogin)
         <input type="submit" value="Sign In">
 
     </form>
-    <p>Don't have an account? <button><a href="SingUp.php">Sign Up</a></button></p>
+    <p>Don't have an account? <button><a href="SignUp.php">Sign Up</a></button></p>
 </body>
 </html>
