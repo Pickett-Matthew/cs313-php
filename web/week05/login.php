@@ -24,7 +24,7 @@ if(isset($_POST['txtusername']) && isset($_POST['txtpassword']))
 
         if($password == $pw)
         {
-          $_SESSION['username'] == $username;
+          $_SESSION['username'] = $username;
           header("Location: home.php");
           die();
         }
