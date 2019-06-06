@@ -14,6 +14,7 @@
         Password: <input type="password" name="txtPassword" id="txtPassword"><br>
 
         <input type="submit" value="Create Account">
+        
     </form>
 </body>
 </html>
