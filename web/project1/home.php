@@ -39,42 +39,33 @@ else
         </ul>
     </nav>
     <h1>Welome to the home page, <?=$username ?></h1>
+
    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  method="post">
         <select name="option" class="custom-select">
-            <option selected></option>
+            <option selected><i>Choose from below<i></option>
             <?php 
                 foreach($db->query('SELECT childname FROM child')as $row)
                 {
+                    $i = 1;
                     $child = $row['childname'];
-                    echo "<option value='option'>$child</option>";
+                    echo "<option value='option[$i]'>$child</option>";
+                    $i++;
                 }
             ?>
         </select>
+        <input type="submit" value="insert" name="insert">
         <div class="container">
-            <?php
-                $option = $_POST['option'];
-                echo $option; 
+            <?php 
+                echo $child;
             ?>
         </div>
     </form>
 
-    <div class="container">
-        <form action="$_SERVER['PHP_SELF']" method='POST'>
-            <select name="cars" class="custom-select">
-                <option selected>Custom Select Menu</option>
-                <option value="volvo">Volvo</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-            </select>
-        </form>
 
-        <?php 
-            $option = $_POST['cars'];
-            echo $option;
-        ?>
-        <p><?php $option ?></p>
-    </div>
 
+
+
+<script src="myScript.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
