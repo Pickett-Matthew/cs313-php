@@ -26,7 +26,7 @@ else
 <body>
     <nav class="navbar navbar-light bg-light pb-1rem">
         <a class="navbar-brand" href="#">
-            <img src="piggy.jpg" alt="">
+            <img src="piggy.jpg" width=30 height=30 alt="">
             Virtual Piggy Bank
         </a>
         <ul class="navbar-nav">
@@ -55,7 +55,7 @@ else
         </form>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <?php 
                 if($_SERVER['REQUEST_METHOD'] == "POST") {
