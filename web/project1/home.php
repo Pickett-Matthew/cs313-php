@@ -55,14 +55,19 @@ else
     </form>
 
     <div class="container">
-        <?php 
-            $option = $_POST['option'];
-            foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = $option")as $item)
-            {
-                echo $item['childname'] . " " . $item['age'] . " " . $item['bank'];
-
-            }
-        ?>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <?php 
+                if($_SERVER['REQUEST_METHOD'] == "POST") {
+                    if(isset($_POST['option'])){
+                        foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['option']}';") as $item) {
+                            echo "<div class='list-group' style='width:200px;'><li class='list-group-item'> {$item['childname']} </li> 
+                                  <li class='list-group-item'> {$item['age']} years old</li>
+                                  <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
+                        }
+                    }
+                }
+            ?>
+        </form>
     </div>
 
 
