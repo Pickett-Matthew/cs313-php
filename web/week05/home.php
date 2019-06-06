@@ -28,7 +28,7 @@ else
 </head>
 <body>
     <div class="container">
-     <h1>Welcome <?php echo $username ?>, to your virtual piggy bank!</h1>
+     <h1>Welcome <?php $username ?>, to your virtual piggy bank!</h1>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <p class="row">Click below to see the assigned chores for your children</p>
             <p class="row">Use search bar to query by Name. ('Henry Pickett')</p>
