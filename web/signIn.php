@@ -59,12 +59,12 @@ if($badLogin)
         <form action="signIn.php" method="POST">
             <div class="form-row align-items-center">
                 <div class="col-auto">
-                    <label class="sr-only" for="txtName">Username</label>
+                    <label for="txtName">Username</label><br>
                     <input class="form-control mb-2" type="text" name="txtName" id="txtName">
                 </div>
 
                 <div class="col-auto">
-                    <label class="sr-only" for="txtPassword">Password</label>
+                    <label  for="txtPassword">Password</label><br>
                     <input class="form-control mb-2" type="password" id="txtPassword" name="txtPassword">
                 </div>
                 <button class="btn btn-primary" type="submit">Sign In</button>
