@@ -83,6 +83,20 @@ else
 
         <!-- Add a new chore to database --> 
         <div class="col-sm-9">
+            <h4><small>Add a Chore</small></h4>
+            <hr>
+            <form action="addChore.php" method="post">
+                <h6><small>Chose Child</small></h6>
+                    <div class="btn-group">
+                        <?php
+                            foreach($db->query('SELECT childname FROM child')as $row)
+                            {
+                                $child = $row['childname'];
+                                echo "<button type='button' class='btn btn-primary'>$child</button><br>";
+                            }
+                        ?>
+                </div>
+            </form>
          
         </div>
 
