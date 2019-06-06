@@ -51,13 +51,15 @@ else
                 }
             ?>
         </select>
-        <div class="container">
-            <?php 
-                $option = $_POST['option'];
-                echo $option['childname'];
-            ?>
-        </div>
     </form>
+
+    <div class="container">
+        <?php 
+            $option = $_POST['option'];
+            echo $option['childname'];
+        ?>
+    </div>
+    
 
 
 
