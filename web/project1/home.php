@@ -40,23 +40,21 @@ else
     </nav>
     <h1>Welome to the home page, <?=$username ?></h1>
 
-   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  method="post">
+   <form method="post">
         <select name="option" class="custom-select">
             <option selected><i>Choose from below<i></option>
             <?php 
                 foreach($db->query('SELECT childname FROM child')as $row)
                 {
-                    $i = 1;
                     $child = $row['childname'];
-                    echo "<option value='option[$i]'>$child</option>";
-                    $i++;
+                    echo "<option value='$child'>$child</option>";
                 }
             ?>
         </select>
-        <input type="submit" value="insert" name="insert">
         <div class="container">
             <?php 
-                echo $child;
+                $option = $_POST['option'];
+                echo $option['childname'];
             ?>
         </div>
     </form>
