@@ -45,9 +45,8 @@ else
             <?php 
                 foreach($db->query('SELECT childname FROM child')as $row)
                 {
-                    $i = 0;
                     $child = $row['childname'];
-                    echo "<option value='$child[$i]'>$child</option>";
+                    echo "<option value='option'>$child</option>";
                 }
             ?>
         </select>
