@@ -2,8 +2,7 @@
 <?php include 'navbar.php' ?>
 <?php
 session_start();
-
-$_SESSION['username'] = $username;
+$username = $_POST['username'];
 ?>
 
 
