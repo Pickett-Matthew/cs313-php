@@ -39,36 +39,44 @@ else
         </ul>
     </nav>
     <h1 class="jumbotron">Welome to the home page, <?=$username ?></h1>
-    <div class="container">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <select name="option" class="custom-select">
-                <option selected><i>Choose from below<i></option>
-                <?php 
-                    foreach($db->query('SELECT childname FROM child')as $row)
-                    {
-                        $child = $row['childname'];
-                        echo "<option value='$child'>$child</option>";
-                    }
-                ?>
-            </select>
-        <button type="submit">Submit</button>
-        </form>
+    
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h4>Active Chores</h4>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <select name="option" class="custom-select">
+                            <option selected><i>Choose from below<i></option>
+                            <?php 
+                                foreach($db->query('SELECT childname FROM child')as $row)
+                                {
+                                    $child = $row['childname'];
+                                    echo "<option value='$child'>$child</option>";
+                                }
+                            ?>
+                        </select>
+                    <button type="submit" class="btn btn-info">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <?php 
-                if($_SERVER['REQUEST_METHOD'] == "POST") {
-                    if(isset($_POST['option'])){
-                        foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['option']}';") as $item) {
-                            echo "<div class='list-group' style='width:200px;'><li class='list-group-item'> {$item['childname']} </li> 
-                                  <li class='list-group-item'> {$item['age']} years old</li>
-                                  <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
+    <div class="container-fluid">
+        <div class="row content">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <?php 
+                    if($_SERVER['REQUEST_METHOD'] == "POST") {
+                        if(isset($_POST['option'])){
+                            foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['option']}';") as $item) {
+                                echo "<div class='col-sm-3 sidenav'><li class='list-group-item'> {$item['childname']} </li> 
+                                    <li class='list-group-item'> {$item['age']} years old</li>
+                                    <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
+                            }
                         }
                     }
-                }
-            ?>
-        </form>
+                ?>
+            </form>
+        </div>
     </div>
 
 
