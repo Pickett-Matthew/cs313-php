@@ -57,18 +57,21 @@ if($badLogin)
 ?>
     <div class="container">
         <form action="signIn.php" method="POST">
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <label class="sr-only" for="txtName">Username</label>
+                    <input class="form-control mb-2" type="text" name="txtName" id="txtName">
+                </div>
 
-            <input type="text" name="txtName" id="txtName">
-            <label for="txtName">Username</label><br>
-
-            <input type="password" id="txtPassword" name="txtPassword">
-            <label for="txtPassword">Password</label><br>
-
-            <input type="submit" value="Sign In">
-
+                <div class="col-auto">
+                    <label class="sr-only" for="txtPassword">Password</label>
+                    <input class="form-control mb-2" type="password" id="txtPassword" name="txtPassword">
+                </div>
+                <button class="btn btn-primary" type="submit">Sign In</button>
+            </div>
         </form>
+        <p>Don't have an account? <button><a href="SignUp.php">Sign Up</a></button></p>
     </div>
-    <p>Don't have an account? <button><a href="SignUp.php">Sign Up</a></button></p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
