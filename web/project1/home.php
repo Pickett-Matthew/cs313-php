@@ -39,7 +39,7 @@ else
         </ul>
     </nav>
     <h1>Welome to the home page, <?=$username ?></h1>
-   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+   <form action="" method="post">
         <select name="option" class="custom-select">
             <option selected>Choose Here</option>
             <?php 
