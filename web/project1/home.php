@@ -55,7 +55,7 @@ else
                                 }
                             ?>
                         </select>
-                    <button type="submit" class="btn btn-info">Submit</button>
+                    <button type="submit" class="btn btn-info py-2">Submit</button>
                 </form>
             </div>
         </div>
@@ -68,7 +68,7 @@ else
                     if($_SERVER['REQUEST_METHOD'] == "POST") {
                         if(isset($_POST['option'])){
                             foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['option']}';") as $item) {
-                                echo "<div class='col-sm-3 sidenav'><li class='list-group-item'> {$item['childname']} </li> 
+                                echo "<div class='list-group'><li class='list-group-item'> {$item['childname']} </li> 
                                     <li class='list-group-item'> {$item['age']} years old</li>
                                     <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
                             }
