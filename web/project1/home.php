@@ -78,15 +78,24 @@ else
                                     }
                                 ?>
                             </div>
+                            
                             <hr>
+
                             <div class="form-group">
-                                    <label for="description">Description</label>
-                                    <input type="text" class="form-control" name="description">
-                            </div>   
+                                <label for="description">Description</label>
+                                <input type="text" class="form-control" name="description">
+                            </div>  
+
                             <hr>
-                            <div class="form-group col-xs-1">
-                                    <label for="chore_value">Value</label>
-                                    <input type="number" class="form-control" name="chore_value">
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                    <input type="text" class="form-control" name="chore-value" aria-label="Amount (to the nearest dollar)">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
                             </div>
                     </form>
                 </div>
