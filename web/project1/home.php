@@ -50,6 +50,7 @@ else
                 }
             ?>
         </select>
+        <input type="submit" value="submit form"/>
     </form>
 
     <div class="container">
