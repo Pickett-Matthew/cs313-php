@@ -53,7 +53,9 @@ else
     </form>
 
     <?php
-        echo $child;
+    $option = $_POST['option'];
+    echo $option;
+        
     ?>
 
 
