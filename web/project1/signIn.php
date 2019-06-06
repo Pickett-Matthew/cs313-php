@@ -56,13 +56,13 @@ if($badLogin)
 }
 ?>
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light pb-1rem">
         <a class="navbar-brand" href="#">
             <img src="piggy.jpg" width="30" height="30" alt="">
             Virtual Piggy Bank
         </a>
     </nav>
-    <div class="container border border-secondary p-5">
+    <div class="container border border-secondary">
         <div class="row justify-content-center p-5">
             <form action="signIn.php" method="POST">
                 <div class="form-row align-items-center p-5">
