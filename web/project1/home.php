@@ -84,9 +84,9 @@ else
                                     <input type="text" class="form-control" name="description">
                             </div>   
                             <hr>
-                            <div class="form-group">
+                            <div class="form-group col-xs-1">
                                     <label for="chore_value">Value</label>
-                                    <input type="number" class="form-control col-xs-1" name="chore_value">
+                                    <input type="number" class="form-control" name="chore_value">
                             </div>
                     </form>
                 </div>
