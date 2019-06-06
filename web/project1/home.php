@@ -26,7 +26,7 @@ else
 <body>
     <nav class="navbar navbar-light bg-light pb-1rem">
         <a class="navbar-brand" href="#">
-            <img src="piggy.jpg" width="30" height="30" alt="">
+            <img src="piggy.jpg" alt="">
             Virtual Piggy Bank
         </a>
         <ul class="navbar-nav">
@@ -38,21 +38,22 @@ else
             </li>
         </ul>
     </nav>
-    <h1>Welome to the home page, <?=$username ?></h1>
-
-   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <select name="option" class="custom-select">
-            <option selected><i>Choose from below<i></option>
-            <?php 
-                foreach($db->query('SELECT childname FROM child')as $row)
-                {
-                    $child = $row['childname'];
-                    echo "<option value='$child'>$child</option>";
-                }
-            ?>
-        </select>
-       <button type="submit">Submit</button>
-    </form>
+    <h1 class="jumbotron">Welome to the home page, <?=$username ?></h1>
+    <div class="container">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <select name="option" class="custom-select">
+                <option selected><i>Choose from below<i></option>
+                <?php 
+                    foreach($db->query('SELECT childname FROM child')as $row)
+                    {
+                        $child = $row['childname'];
+                        echo "<option value='$child'>$child</option>";
+                    }
+                ?>
+            </select>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
 
     <div class="container-fluid">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
