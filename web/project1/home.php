@@ -39,7 +39,19 @@ else
         </ul>
     </nav>
     <h1>Welome to the home page, <?=$username ?></h1>
-    
+   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <select name="child" class="custom-select">
+            <option selected>Choose Here</option>
+            <?php 
+                foreach($db->query('SELECT childname FROM child')as $row)
+                {
+                    $child = $row['childname'];
+                    echo "<option value='$child'>$child</option>";
+                }
+            ?>
+        </select>
+    </form>
+
     <div class="container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <?php 

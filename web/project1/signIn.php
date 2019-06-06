@@ -62,7 +62,8 @@ if($badLogin)
             Virtual Piggy Bank
         </a>
     </nav>
-    <div class="container border border-secondary">
+    <div class="container">
+        <h2>Sign In</h2>
         <div class="row justify-content-center p-5">
             <form action="signIn.php" method="POST">
                 <div class="form-row align-items-center p-5">
