@@ -56,7 +56,7 @@ else
         <?php
         //$option holds the name of the selected child
         $option = $_POST['option']; 
-        foreach($db->query('SELECT childname, age, bank FROM child WHERE childname = $option')as $item)
+            foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = $option")as $item)
         {
             echo "<div class='list-group' style='width:200px;'><li class='list-group-item'> {$item['childname']} </li> 
                                   <li class='list-group-item'> {$item['age']} years old</li>
