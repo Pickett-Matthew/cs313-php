@@ -10,12 +10,5 @@ echo $child . "<br>";
 echo $description . "<br>";
 echo $c_value . "<br>";
 
-
-$workerid = pg_query($db, 'SELECT id from child where childname = $_POST["name"]');
-
-echo $workerid;
-
-
-
 ?>
 <p>These are the values</p>
