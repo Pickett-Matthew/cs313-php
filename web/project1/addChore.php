@@ -12,11 +12,6 @@ echo $c_value . "<br>";
 
 
 
-$query = "SELECT id from child where childname = $child";
-$workerid = $db->prepare($query);
-echo $workerid . "<br>";
-
-
 
 ?>
 <p>These are the values</p>
