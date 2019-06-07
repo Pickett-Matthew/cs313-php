@@ -8,18 +8,12 @@ $c_value = $_POST['chore-value'];
 
 $workerid = "SELECT id from child where childname = $child ";
 
-$query = 'INSERT into chore(workerid, description, c_value) VALUES(:workerid, :description, :c_value)';
+echo $child . "<br>";
+echo $$description . "<br>";
+echo $c_value . "<br>";
+echo $workerid . "<br>";
 
-$statement = $db->prepare($query);
-
-$statement->bindValue(':workerid', $workerid);
-$statement->bindValue(':description', $description);
-$statement->bindValue(':c_value', $c_value);
-
-$statement->execute();
-
-header("Location: home.php");
-die();
 
 
 ?>
+<p>These are the values</p>
