@@ -40,7 +40,7 @@ else
     </nav>
     
     <div class="jumbotron">
-        <h1 class="display-4"><?php $username ?>'s Virtual Piggy Bank!</h1>
+        <h1 class="display-4"><?= $username ?>'s Virtual Piggy Bank!</h1>
         <p class="lead">Add Chores and view status of your child's piggy bank</p>
         <hr class="my-4">
     </div>
