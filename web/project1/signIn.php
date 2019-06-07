@@ -56,7 +56,7 @@ if($badLogin)
 }
 ?>
 <body>
-    <nav class="navbar navbar-light bg-light pb-1rem">
+    <nav class="navbar navbar-light bg-light mb-1rem">
         <a class="navbar-brand" href="#">
             <img src="piggy.jpg" width="30" height="30" alt="">
             Virtual Piggy Bank
@@ -67,11 +67,11 @@ if($badLogin)
         <div class="row justify-content-center m-1">
             <form action="signIn.php" method="POST">
                 <div class="form-row align-items-center m-1">
-                    <div class="row p-5">
+                    <div class="row">
                         <input class="form-control mb-2" type="text" name="txtName" id="txtName" Placeholder="Username">
                     </div>
 
-                    <div class="row p-5">
+                    <div class="row">
                         <input class="form-control mb-2" type="password" id="txtPassword" name="txtPassword" Placeholder="password">
                     </div>
                     <button class="btn btn-primary" type="submit">Sign In</button>
