@@ -12,7 +12,18 @@ echo $c_value . "<br>";
 
 foreach($db->query("SELECT id from child WHERE childname = '{$_POST["name"]}';")as $workerid)
 {
-    echo $workerid['id'];
+    $workerid = $workerid['id'];
 }
+
+$query = "INSERT into chore(workerid, description, c_value) VALUES(:workerid, :description, :c_value)";
+
+$statement = $db->prepare($query);
+
+$statement->bindValue(':workerid', $workerid);
+$statement->bindValue(':description', $description);
+$statement->bindValue(':c_value', $c_value);
+
+$statement->execute();
+
+header("Location: home.php");
 ?>
-<p>These are the values</p>
