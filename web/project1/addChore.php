@@ -7,7 +7,7 @@ $description = $_POST['description'];
 $c_value = $_POST['chore-value'];
 
 echo $child . "<br>";
-echo $$description . "<br>";
+echo $description . "<br>";
 echo $c_value . "<br>";
 
 
