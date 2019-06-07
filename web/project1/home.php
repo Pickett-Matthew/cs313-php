@@ -74,7 +74,7 @@ else
                                     foreach($db->query('SELECT childname FROM child')as $row)
                                     {
                                         $child = $row['childname'];
-                                        echo "<button type='button' class='btn btn-primary'>$child</button><br>";
+                                        echo "<button type='button' class='btn btn-primary' name='add_chore_name'>$child</button><br>";
                                     }
                                 ?>
                             </div>
@@ -97,6 +97,8 @@ else
                                     <span class="input-group-text">.00</span>
                                 </div>
                             </div>
+
+                            <input type="submit" class="btn btn-primary" value="Add Chore">
                     </form>
                 </div>
         </div> <!-- columns -->
