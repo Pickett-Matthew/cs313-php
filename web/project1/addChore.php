@@ -6,7 +6,7 @@ $child = $_POST['name'];
 $description = $_POST['description'];
 $c_value = $_POST['chore-value'];
 
-$workerid = "SELECT id from child where childname = $child ";
+$workerid = $db->query("SELECT id from child where childname = $child ");
 
 echo $child . "<br>";
 echo $$description . "<br>";
