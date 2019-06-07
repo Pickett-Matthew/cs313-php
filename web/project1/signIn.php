@@ -56,29 +56,27 @@ if($badLogin)
 }
 ?>
 <body>
-    <nav class="navbar navbar-light bg-light mb-1rem">
+    <nav class="navbar navbar-light bg-light b-1rem">
         <a class="navbar-brand" href="#">
             <img src="piggy.jpg" width="30" height="30" alt="">
             Virtual Piggy Bank
         </a>
     </nav>
+
     <div class="container">
         <h2>Sign In</h2>
-        <div class="row justify-content-center m-1">
             <form action="signIn.php" method="POST">
-                <div class="form-row align-items-center m-1">
-                    <div class="row">
-                        <input class="form-control mb-2" type="text" name="txtName" id="txtName" Placeholder="Username">
-                    </div>
+                <div class="form-group mb-2">
+                    <label for="txtName" class="form-group">Name</label>
+                    <input class="form-control col-sm-4" type="text" name="txtName" id="txtName" Placeholder="Username">
 
-                    <div class="row">
-                        <input class="form-control mb-2" type="password" id="txtPassword" name="txtPassword" Placeholder="password">
-                    </div>
+                    <label for="txtPassword" class="form-group">Password</label>
+                    <input class="form-control col-sm-4" type="password" id="txtPassword" name="txtPassword" Placeholder="password">
+                    
                     <button class="btn btn-primary" type="submit">Sign In</button>
                 </div>
             </form>
-        </div>
-        <h6 class="col-sm">Don't have an account? <button class="btn btn-outline-primary btn-sm"><a href="SignUp.php">Sign Up</a></button></h6>
+        <h6>Don't have an account? <button class="btn btn-outline-primary btn-sm"><a href="SignUp.php">Sign Up</a></button></h6>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
