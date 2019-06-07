@@ -2,7 +2,7 @@
 
 <?php 
 
-$child = $_POST['add_chore_name'];
+$child = $_POST['name'];
 $description = $_POST['description'];
 $c_value = $_POST['chore-value'];
 

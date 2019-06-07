@@ -69,15 +69,7 @@ else
                     <hr>
                     <form action="addChore.php" method="post">
                         <h6><small>Chose Child</small></h6>
-                            <div class="btn-group btn-group-lg">
-                                <?php
-                                    foreach($db->query('SELECT childname FROM child')as $row)
-                                    {
-                                        $child = $row['childname'];
-                                        echo "<button type='button' class='btn btn-primary' name='add_chore_name'>$child</button><br>";
-                                    }
-                                ?>
-                            </div>
+                           <input type="text" name="name">
 
                             <hr>
 
