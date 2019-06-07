@@ -13,7 +13,7 @@ $query = 'INSERT into chore(workerid, description, c_value) VALUES(:workerid, :d
 $statement = $db->prepare($query);
 
 $statement->bindValue(':workerid', $workerid);
-$statement->bindValue(':description', $description);
+$statement->bindValue(':description', $desc);
 $statement->bindValue(':c_value', $c_value);
 
 $statement-execute();

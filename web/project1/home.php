@@ -97,8 +97,7 @@ else
                                     <span class="input-group-text">.00</span>
                                 </div>
                             </div>
-
-                            <input type="submit" class="btn btn-primary" value="Add Chore">
+                        <input type="submit" class="btn btn-primary" value="Add Chore">
                     </form>
                 </div>
         </div> <!-- columns -->
