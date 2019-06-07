@@ -63,65 +63,66 @@ else
                 </form>
             </div>
 
-                <!-- Add a new chore to database --> 
-                <div class="col-sm-8">
-                    <h4><small>Add a Chore</small></h4>
-                    <hr>
-                    <form action="addChore.php" method="post">
-                        <h6><small>Chose Child</small></h6>
-
-                            <select name="name" class="custom-select">
-                                <option selected><i>Choose from below<i></option>
-                                <?php 
-                                    foreach($db->query('SELECT childname FROM child')as $row)
-                                    {
-                                        $child = $row['childname'];
-                                        echo "<option value='$child'>$child</option>";
+            <!-- displays the name, age, and bank of child selected --> 
+            <div class="container-fluid">
+                <div class="row content">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == "POST") {
+                                if(isset($_POST['option'])){
+                                    foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['option']}';") as $item) {
+                                        echo "<div class='list-group'><li class='list-group-item'> {$item['childname']} </li> 
+                                            <li class='list-group-item'> {$item['age']} years old</li>
+                                            <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
                                     }
-                                ?>
-                            </select>
-
-                            <hr>
-
-                            <div class="form-group">
-                                <label for="description">Description</label>
-                                <input type="text" class="form-control" name="description">
-                            </div>  
-
-                            <hr>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                </div>
-                                    <input type="text" class="form-control-xs" name="chore-value" aria-label="Amount (to the nearest dollar)">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
-                                </div>
-                            </div>
-                            <input type="submit" class="btn btn-primary" value="Add Chore">
-                    </form>
-                </div>
-        </div> <!-- columns -->
-
-        <!-- displays the name, age, and bank of child selected --> 
-        <div class="container-fluid">
-            <div class="row content">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <?php 
-                        if($_SERVER['REQUEST_METHOD'] == "POST") {
-                            if(isset($_POST['option'])){
-                                foreach($db->query("SELECT childname, age, bank FROM child WHERE childname = '{$_POST['option']}';") as $item) {
-                                    echo "<div class='list-group'><li class='list-group-item'> {$item['childname']} </li> 
-                                        <li class='list-group-item'> {$item['age']} years old</li>
-                                        <li class='list-group-item'> {$item['bank']} dollars in piggy bank</li>";
                                 }
                             }
-                        }
-                    ?>
+                        ?>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Add a new chore to database --> 
+            <div class="col-sm-8">
+                <h4><small>Add a Chore</small></h4>
+                <hr>
+                <form action="addChore.php" method="post">
+                    <h6><small>Chose Child</small></h6>
+
+                        <select name="name" class="custom-select">
+                            <option selected><i>Choose from below<i></option>
+                            <?php 
+                                foreach($db->query('SELECT childname FROM child')as $row)
+                                {
+                                    $child = $row['childname'];
+                                    echo "<option value='$child'>$child</option>";
+                                }
+                            ?>
+                        </select>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" name="description">
+                        </div>  
+
+                        <hr>
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                                <input type="text" class="form-control-xs" name="chore-value" aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Add Chore">
                 </form>
             </div>
-        </div>
+
+        </div> <!-- columns -->
 
 </div> <!-- main div container --> 
 
