@@ -10,6 +10,10 @@ echo $child . "<br>";
 echo $description . "<br>";
 echo $c_value . "<br>";
 
+$query = 'SELECT id from child where childname = $_POST["name"]';
+$workerid = pg_query($db, $query);
+
+echo $workerid;
 
 
 
