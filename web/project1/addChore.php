@@ -10,9 +10,9 @@ echo $child . "<br>";
 echo $description . "<br>";
 echo $c_value . "<br>";
 
-foreach($db->query("SELECT id from child WHERE childname = $child")as $workerid)
+foreach($db->query("SELECT id from child WHERE childname = '{$_POST["name"]}';")as $workerid)
 {
-    echo $workerid;
+    echo $workerid['id'];
 }
 ?>
 <p>These are the values</p>
