@@ -38,14 +38,14 @@ else
             </li>
         </ul>
     </nav>
-    <h1 class="jumbotron">Welome to the home page, <?=$username ?></h1>
+    <h1 class="jumbotron jumbotron-fluid">Welome to the home page, <?=$username ?></h1>
     
     <div class="container-fluid">
 
         <!-- input field to select Active chores from child table --> 
         <div class="row content">
             <div class="col-sm-4 sidenav">
-                <h4>Active Chores</h4>
+                <h4>Your Children</h4>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <select name="option" class="custom-select">
                             <option selected><i>Choose from below<i></option>
@@ -93,7 +93,7 @@ else
                                 <span class="input-group-text">.00</span>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Add Chore">
+                        <input type="submit" class="btn btn-primary mt-2" value="Add Chore">
                 </form>
             </div>
 
