@@ -3,7 +3,7 @@
 <?php 
 
 $child = $_POST['add_chore_name'];
-$desc = $_POST['description'];
+$description = $_POST['description'];
 $c_value = $_POST['chore-value'];
 
 $workerid = "SELECT id from child where childname = $child ";
@@ -13,10 +13,10 @@ $query = 'INSERT into chore(workerid, description, c_value) VALUES(:workerid, :d
 $statement = $db->prepare($query);
 
 $statement->bindValue(':workerid', $workerid);
-$statement->bindValue(':description', $desc);
+$statement->bindValue(':description', $description);
 $statement->bindValue(':c_value', $c_value);
 
-$statement-execute();
+$statement->execute();
 
 header("Location: home.php");
 die();
