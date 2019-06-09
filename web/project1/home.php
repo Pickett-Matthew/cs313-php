@@ -36,6 +36,9 @@ else
             <li class="nav-item">
                 <a class="nav-link" href="home.php">Home</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signOut.php">Sign Out</a>
+            </li>
         </ul>
     </nav>
     
@@ -49,7 +52,7 @@ else
 
         <!-- input field to select Active chores from child table --> 
         <div class="row content">
-            <div class="col-sm-4 sidenav">
+            <div class="col-xs-4 sidenav">
                 <h4>Your Children</h4>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <select name="option" class="custom-select">
@@ -150,21 +153,19 @@ else
                                     </thead>";
                             foreach($db->query('SELECT chore.description, child.childname, c_value from chore inner Join 
                             child on chore.workerId = child.id') as $chore) {
-                                $i = 0;
                                 echo "<table class='table'>
                                         <tbody>
                                             <tr>
-                                                <th scope='row'>$i;</th>
+                                                <th scope='row'><div class='glyphicon glyphicon-piggy-bank'><div></th>
                                                 <td>{$chore["childname"]}</td>
                                                 <td>{$chore["description"]}</td>
-                                                <td class='ml-auto'>${$chore["c_value"]}</td>
+                                                <td class='ml-auto'>'$'{$chore["c_value"]}</td>
                                             </tr>
                                         </tbody>
                                     </table>";
                             }
                         }
                     }
-                    $i++;
                     ?>
                 </form>
         </div>

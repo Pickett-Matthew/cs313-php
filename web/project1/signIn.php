@@ -63,7 +63,7 @@ if($badLogin)
         </a>
     </nav>
 
-    <div class="container">
+    <div class="container mt-5">
         <h2>Sign In</h2>
             <form action="signIn.php" method="POST">
                 <div class="form-group mb-2">
@@ -73,7 +73,7 @@ if($badLogin)
                     <label for="txtPassword" class="form-group">Password</label>
                     <input class="form-control col-sm-4" type="password" id="txtPassword" name="txtPassword" Placeholder="password">
                     
-                    <button class="btn btn-primary" type="submit">Sign In</button>
+                    <button class="btn btn-primary my-4" type="submit">Sign In</button>
                 </div>
             </form>
         <h6>Don't have an account? <button class="btn btn-outline-primary btn-sm"><a href="SignUp.php">Sign Up</a></button></h6>
