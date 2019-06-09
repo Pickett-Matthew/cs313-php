@@ -24,9 +24,9 @@ else
     <title>Home</title>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light pb-1rem">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="piggy.jpg" width=30 height=30 alt="">
+            <img src="piggy.jpg" width=40 height=40 alt="">
             Virtual Piggy Bank
         </a>
         <ul class="navbar-nav">
@@ -34,10 +34,7 @@ else
                 <a class="nav-link" href="signOut.php">Sign Out</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="home.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="signOut.php">Sign Out</a>
+                <a class="nav-link active" href="home.php">Home</a>
             </li>
         </ul>
     </nav>
