@@ -130,7 +130,7 @@ else
 
 <hr class="my-4"> <!-- main div container --> 
 
-<div class="container-fluid pb-4">
+<div class="container-fluid my-5">
     <div class="row-content">
         <div class="col-sm-4">
             <h2>Show Chores</h2>
@@ -150,19 +150,21 @@ else
                                     </thead>";
                             foreach($db->query('SELECT chore.description, child.childname, c_value from chore inner Join 
                             child on chore.workerId = child.id') as $chore) {
+                                $i = 0;
                                 echo "<table class='table'>
                                         <tbody>
                                             <tr>
-                                                <th scope='row'><span class='glyphicon glyphicon-piggy-bank'><span></th>
+                                                <th scope='row'>$i;</th>
                                                 <td>{$chore["childname"]}</td>
                                                 <td>{$chore["description"]}</td>
-                                                <td class='ml-auto'>{$chore["c_value"]}</td>
+                                                <td class='ml-auto'>${$chore["c_value"]}</td>
                                             </tr>
                                         </tbody>
                                     </table>";
                             }
                         }
                     }
+                    $i++;
                     ?>
                 </form>
         </div>
