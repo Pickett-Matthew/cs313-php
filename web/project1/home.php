@@ -62,7 +62,7 @@ else
                                 }
                             ?>
                         </select>
-                    <button type="submit" class="btn btn-info my-2">Search</button>
+                    <button type="submit" class="btn btn-primary my-2">Search</button>
                 </form>
             </div>
 
@@ -130,39 +130,43 @@ else
 
 <hr class="my-4"> <!-- main div container --> 
 
-<div class="container-fluid col-sm-4 mb-4">
-    <h2>Show Chores</h2>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <p class="row">Click below to see the assigned chores for your children</p>
-            <button type="submit" name="chores" class="btn btn-primary my-2">Show Chores</button><br>
-            <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
-                if(isset($_POST['chores'])) {
-                    echo "<table class='table'>
-                            <thead>
-                                <tr>
-                                    <th scope='col'>#</th>
-                                    <th scope='col'>Name</th>
-                                    <th scope='col'>Chore</th>
-                                    <th scope='col'>Value</th>
-                                </tr>
-                            </thead>";
-                    foreach($db->query('SELECT chore.description, child.childname, c_value from chore inner Join 
-                    child on chore.workerId = child.id') as $chore) {
-                        echo "<table class='table'>
-                                <tbody>
-                                    <tr>
-                                        <th scope='row'>1</th>
-                                        <td>{$chore["childname"]}</td>
-                                        <td>{$chore["description"]}</td>
-                                        <td>{$chore["c_value"]}</td>
-                                    </tr>
-                                </tbody>
-                            </table>";
+<div class="container-fluid pb-4">
+    <div class="row-content">
+        <div class="col-sm-4">
+            <h2>Show Chores</h2>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <p class="row">Click below to see the assigned chores for your children</p>
+                    <button type="submit" name="chores" class="btn btn-primary my-2">Show Chores</button><br>
+                    <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
+                        if(isset($_POST['chores'])) {
+                            echo "<table class='table'>
+                                    <thead>
+                                        <tr>
+                                            <th scope='col'>#</th>
+                                            <th scope='col'>Name</th>
+                                            <th scope='col'>Chore</th>
+                                            <th scope='col'>Value</th>
+                                        </tr>
+                                    </thead>";
+                            foreach($db->query('SELECT chore.description, child.childname, c_value from chore inner Join 
+                            child on chore.workerId = child.id') as $chore) {
+                                echo "<table class='table'>
+                                        <tbody>
+                                            <tr>
+                                                <th scope='row'><span class='glyphicon glyphicon-piggy-bank'><span></th>
+                                                <td>{$chore["childname"]}</td>
+                                                <td>{$chore["description"]}</td>
+                                                <td class='ml-auto'>{$chore["c_value"]}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>";
+                            }
+                        }
                     }
-                }
-            }
-            ?>
-        </form>
+                    ?>
+                </form>
+        </div>
+    </div>
 </div>
 
 
