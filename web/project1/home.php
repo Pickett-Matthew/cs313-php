@@ -52,7 +52,7 @@ else
 
         <!-- input field to select Active chores from child table --> 
         <div class="row content">
-            <div class="col-xs-4 sidenav">
+            <div class="col-sm-5 sidenav">
                 <h4>Your Children</h4>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <select name="option" class="custom-select">
@@ -71,7 +71,7 @@ else
 
 
             <!-- Add a new chore to database --> 
-            <div class="col-sm-8">
+            <div class="col-sm-7">
                 <h4><small>Add a Chore</small></h4>
                 <hr>
                 <form action="addChore.php" method="post">
@@ -135,14 +135,14 @@ else
 
 <div class="container-fluid my-5">
     <div class="row-content">
-        <div class="col-sm-4">
+        <div class="col-sm-5">
             <h2>Show Chores</h2>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <p class="row">Click below to see the assigned chores for your children</p>
                     <button type="submit" name="chores" class="btn btn-primary my-2">Show Chores</button><br>
                     <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
                         if(isset($_POST['chores'])) {
-                            echo "<table class='table'>
+                            echo "<table class='table m-auto'>
                                     <thead>
                                         <tr>
                                             <th scope='col'>#</th>
@@ -156,10 +156,10 @@ else
                                 echo "<table class='table'>
                                         <tbody>
                                             <tr>
-                                                <th scope='row'><div class='glyphicon glyphicon-piggy-bank'><div></th>
+                                                <th scope='row'></th>
                                                 <td>{$chore["childname"]}</td>
                                                 <td>{$chore["description"]}</td>
-                                                <td class='ml-auto'>'$'{$chore["c_value"]}</td>
+                                                <td>{$chore["c_value"]}</td>
                                             </tr>
                                         </tbody>
                                     </table>";
