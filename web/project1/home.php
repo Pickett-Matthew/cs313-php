@@ -31,10 +31,10 @@ else
         </a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="signOut.php">Sign Out</a>
+                <a class="nav-link active" href="home.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="home.php">Home</a>
+                <a class="nav-link" href="signOut.php">Sign Out</a>
             </li>
         </ul>
     </nav>
