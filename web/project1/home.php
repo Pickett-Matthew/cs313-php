@@ -126,36 +126,30 @@ else
 
         </div> <!-- columns -->
 
+</div> <!-- main div container --> 
 
-        <div class="container mt-5">
-        <h1>Show Chores</h1>
+<div class="container mt-5">
+    <h1>Show Chores</h1>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <p class="row">Click below to see the assigned chores for your children</p>
-            <p class="row">Use search bar to query by Name. ('Henry Pickett')</p>
             <button type="submit" name="chores" class="btn btn-info">Show Chores</button><br>
             <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
                 if(isset($_POST['chores'])) {
                     foreach($db->query('SELECT chore.description, child.childname, c_value from chore inner Join 
                     child on chore.workerId = child.id') as $chore) {
-                        echo "<table class='table'>
-                                <thead class='thead-dark'>
-                                    <tr>
-                                        <th scope='col'>#</th>
-                                        <th scope='col'>{$chore['childname']}</th>
-                                        <th scope='col'>{$chore['description']}</th>
-                                        <th scope='col'>{$chore['c_value']}</th>
-                                    </tr>
-                                </thead>";
+                        echo "<div class='container-fluid'>
+                                <ul class='list-group'>
+                                    <li class='list-group-item'>{$chore["childname"]} <span class='glyphicon glyphicon-piggy-bank'></span></li>
+                                    <li class='list-group-item'>{$chore["description"]} <span class='glyphicon glyphicon-piggy-bank'></span></li>
+                                    <li class='list-group-item'>{$chore["c_value"]} <span class='glyphicon glyphicon-piggy-bank'></span></li>
+                                </ul>
+                            </div>";
                     }
                 }
             }
             ?>
         </form>
-        </div>
-
-</div> <!-- main div container --> 
-
-
+</div>
 
 
 
